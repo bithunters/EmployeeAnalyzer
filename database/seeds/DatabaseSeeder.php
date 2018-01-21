@@ -15,6 +15,6 @@ class DatabaseSeeder extends Seeder
          // factory(App\APIModels\User::class, 5)->create();
          // factory(App\APIModels\Branch::class, 5)->create();
          // factory(App\APIModels\Department::class, 5)->create();
-        factory(App\APIModels\User::class, 5)->create();
+        factory(App\APIModels\Department::class, 5)->create();
     }
 }

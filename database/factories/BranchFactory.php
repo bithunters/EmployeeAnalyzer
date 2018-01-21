@@ -5,11 +5,12 @@ use Faker\Generator as Faker;
 $factory->define(App\APIModels\Branch::class, function (Faker $faker) {
  
     return [
-        'name' => $faker->name,
-        'number' => $faker->tollFreePhoneNumber,
-        'street' => $faker->streetName,
-        'city' => $faker->city,
-        'start_date' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    	'id' => $faker->unique()->numberBetween($min = 1, $max = 9000),
+        'Name' => $faker->name,
+        'Number' => $faker->tollFreePhoneNumber,
+        'Street' => $faker->streetName,
+        'City' => $faker->city,
+        'StartDate' => $faker->date($format = 'Y-m-d', $max = 'now'),
         
         
     ];

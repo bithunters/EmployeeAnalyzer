@@ -12,6 +12,17 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::middleware('auth:api')->post('/loginattempt', 'APIControllers\UsersLoginController@loginAttempt');
 
-Route::middleware('auth:api')->get('/user', 'APIControllers\UsersController@index');
-Route::middleware('auth:api')->get('/department', 'APIControllers\UsersController@department');
+Route::get('/user', 'APIControllers\UsersController@index');
+Route::post('/user/{id}', 'APIControllers\UsersController@indexgetid');
+Route::get('/department', 'APIControllers\DepartmentController@index');
+Route::post('/department/{id}', 'APIControllers\DepartmentController@indexgetid');
+
+Route::post('/leaveapply', 'APIControllers\LeaveController@apply');
+Route::get('/leaves', 'APIControllers\LeaveController@index');
+Route::post('/leaves/{id}', 'APIControllers\LeaveController@indexgetid');
+
+Route::post('/sendmessage', 'APIControllers\MessageController@store');
+Route::get('/messages', 'APIControllers\MessageController@index');
+Route::get('/messages/{id}', 'APIControllers\MessageController@indexgetid');
