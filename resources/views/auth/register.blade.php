@@ -60,6 +60,13 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+                         <div class="form-group">
+                            <label for="user_id" class="col-md-4 control-label">UseId</label>
+
+                            <div class="col-md-6">
+                                <input id="user_id" type="text" class="form-control" name="user_id" required>
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
